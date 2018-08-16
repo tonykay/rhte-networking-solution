@@ -1,0 +1,13 @@
+- name: backup router configurations
+  hosts: routers
+  connection: network_cli
+  gather_facts: no
+
+  tasks:
+  - name: gather ios_facts
+    ios_facts:
+    register: version
+
+  - debug:
+      msg: "{{ version }}"
+
