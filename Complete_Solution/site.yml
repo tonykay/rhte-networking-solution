@@ -1,14 +1,14 @@
 - name: Backup Cisco routers
-  include_playbook: backup.yml
+  import_playbook: backup.yml
 
 - name: Gather Cisco facts
-  include_playbook: cisco_facts.yml
+  import_playbook: cisco_facts.yml
 
 - name: Setup GRE Tunnel
-  include_playbook: gre.yml
+  import_playbook: gre.yml
 
 - name: Setup Routing on Ciscos
-  include_playbook: router_configs.yml
+  import_playbook: router_configs.yml
 
 - name: Update routing locally
-  include_playbook: host_routes.yml
+  import_playbook: host_routes.yml
