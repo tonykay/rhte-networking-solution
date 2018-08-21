@@ -59,3 +59,5 @@
 
       when:
         - '"rtr2" in inventory_hostname'
+
+import_playbook: host-routes.yml          
