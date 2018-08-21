@@ -4,10 +4,12 @@
   gather_facts: no
 
   tasks:
+
   - name: gather ios_facts
     ios_facts:
     register: version
 
-  - debug:
+  - name: output facts
+    debug:
       msg: "{{ version }}"
 

@@ -5,6 +5,6 @@
 
   tasks:
 
-  - name: backup router configuration
+  - name: backup router configurations
     ios_config:
       backup: yes
