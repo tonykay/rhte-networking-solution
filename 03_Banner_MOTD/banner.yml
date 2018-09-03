@@ -1,0 +1,15 @@
+- name: Update banner message
+  hosts: cisco
+  connection: network_cli
+  gather_facts: no
+
+  vars:
+    banner_message: Authorized Access only! Property of FinTech Inc.
+
+  tasks:
+
+  - name: "Update banner message to {{ banner_message }}"
+    ios_config:
+      lines:
+        "banner motd % {{ banner_message }} %"
+
